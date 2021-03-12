@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.0.4",
+    "framer-motion": "^3.10.3",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.18",
     "next": "latest",
@@ -16,6 +17,9 @@
     "postcss": "^8.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
+    "react-wavify": "^1.5.2",
+    "swiper": "^6.5.0",
     "tailwindcss": "^2.0.2"
   }
 }
