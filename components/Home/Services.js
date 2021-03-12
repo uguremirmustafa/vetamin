@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeader from './SectionHeader';
 import ServiceCard from './ServiceCard';
+import ServiceCardRight from './ServiceCardRight';
 import Slider from './Slider';
 
 function Services() {
@@ -15,9 +16,9 @@ function Services() {
         </div>
         {/* large screen services */}
         <div className="grid grid-flow-col grid-cols-1 grid-rows-3 gap-4 mt-8 hidden sm:block">
-          <ServiceCard order={'last'} bg={'cat.jpg'} />
-          <ServiceCard order={'first'} bg={'dog-card.jpg'} />
-          <ServiceCard order={'last'} bg={'hamster-card.jpg'} />
+          <ServiceCard bg={'cat.jpg'} />
+          <ServiceCardRight bg={'dog-card.jpg'} />
+          <ServiceCard bg={'hamster-card.jpg'} />
         </div>
         {/* small screen services */}
         <div className="sm:hidden">

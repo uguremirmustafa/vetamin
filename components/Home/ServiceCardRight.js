@@ -1,14 +1,37 @@
+import Image from 'next/image';
 import React from 'react';
 
-function ServiceCardRight() {
+function ServiceCard({ order, bg }) {
   return (
-    <div className="z-20 w-full flex items-center justify-between px-4 py-2">
-      <div className="absolute bg-white rounded-xl w-40 text-right left-4 text-sm py-2 px-4 shadow-lg">
-        Consectetur velit incididunt enim ullamco aute est. Commodo veniam voluptate dolor.
+    <div className="w-full h-96 grid sm:grid-cols-5 ">
+      <div className="relative row-span-1 w-full col-span-2 bg-red-300  bg-cover rounded-xl transform hover:-rotate-3 cursor-pointer transition delay-150 duration-300 ease-in-out shadow-xl">
+        <Image
+          alt="cat"
+          src={`/assets/${bg}`}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="top"
+          className="rounded-xl"
+        />
       </div>
-      <div className="shadow-lg w-52 h-52 bg-cat-card bg-cover rounded-2xl"></div>
+
+      <div
+        className="col-span-3 p-8 my-auto bg-gray-100 rounded-xl bg-opacity-100 order-first hover:shadow-xl transition delay-150 duration-300 ease-in-out
+        text-sm lg:text-md
+        relative -right-10 "
+      >
+        <h3 className="font-bold text-lg mb-2">Vaccination</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia perferendis
+          atque assumenda! Fuga molestiae a accusantium, ex iste ut voluptatum doloremque sed
+          eveniet laborum obcaecati repellendus voluptas modi tempore.
+        </p>
+        <button className="bg-red-400 w-40 mx-auto rounded-md font-bold text-white p-2 mt-6 shadow">
+          Book a Session
+        </button>
+      </div>
     </div>
   );
 }
 
-export default ServiceCardRight;
+export default ServiceCard;

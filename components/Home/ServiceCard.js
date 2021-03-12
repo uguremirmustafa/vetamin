@@ -16,14 +16,9 @@ function ServiceCard({ order, bg }) {
       </div>
 
       <div
-        className={`col-span-3 p-8 my-auto bg-gray-100 rounded-xl bg-opacity-100 order-${order} hover:shadow-xl transition delay-150 duration-300 ease-in-out
-        text-sm lg:text-md
-        ${order === 'first' ? 'relative -right-10' : 'relative left-2 sm:-left-10'}
+        className={`col-span-3 p-8 my-auto bg-gray-100 rounded-xl bg-opacity-100 hover:shadow-xl transition delay-150 duration-300 ease-in-out text-sm lg:text-md relative left-2 sm:-left-10
         
         `}
-        style={{
-          backdropFilter: 'blur(15px)',
-        }}
       >
         <h3 className="font-bold text-lg mb-2">Vaccination</h3>
         <p>
