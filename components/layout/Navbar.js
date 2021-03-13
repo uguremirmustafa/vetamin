@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // import { signIn, signOut, useSession } from 'next-auth/client';
 import { ActiveLink } from './ActiveLink';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimesCircle, FaWhatsapp } from 'react-icons/fa';
+import { FaBars, FaCheck, FaTimesCircle, FaWhatsapp } from 'react-icons/fa';
+import useOnClickOutside from 'hooks/useOnClickOutside';
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ function Navbar() {
   ];
   const hamburgerRoutes = [
     { route: '/', label: 'Home' },
+    { route: '/services', label: 'services' },
     { route: '/contact', label: 'contact' },
   ];
 
@@ -23,11 +25,14 @@ function Navbar() {
   ));
   const hamburgerLinks = hamburgerRoutes.map((i) => (
     <ActiveLink href={i.route} key={i.route}>
-      <a className="nav-btn" onClick={() => setMenuOpen(false)}>
+      <a className="nav-btn w-full" onClick={() => setMenuOpen(false)}>
         {i.label}
       </a>
     </ActiveLink>
   ));
+
+  const ref = useRef();
+  useOnClickOutside(ref, () => setMenuOpen(false));
 
   useEffect(() => {
     const changeBackground = () => {
@@ -35,6 +40,7 @@ function Navbar() {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+        setMenuOpen(false);
       }
     };
     window.addEventListener('scroll', changeBackground);
@@ -42,38 +48,45 @@ function Navbar() {
       window.removeEventListener('scroll', changeBackground);
     };
   }, []);
-  console.log(isScrolled);
+
+  const handleMenuOpen = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const hamburgerMenu = () => (
-    <nav className="bg-white text-red-500 fixed rounded z-50 top-16 right-4 ">
+    <motion.nav
+      initial={{ opacity: 0, y: -200 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -200 }}
+      ref={ref}
+      className="bg-white text-red-500 fixed rounded z-50 top-4 right-4 xl:right-28 2xl:right-52 shadow-lg"
+    >
       <ul className="p-4 flex flex-col justify-center items-end">{hamburgerLinks}</ul>
-    </nav>
+    </motion.nav>
   );
   return (
     <>
       {isScrolled ? (
         <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="z-50 cursor-pointer fixed top-4 right-4 hover:-rotate-45 transform transition duration-300"
-            style={{ zIndex: 1000 }}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
+          {!menuOpen && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="bg-white rounded-full w-10 h-10 shadow-lg flex justify-center items-center hamburger"
+              className="z-40 cursor-pointer fixed right-4 xl:right-28 2xl:right-52 top-4 hover:-rotate-45 transform transition duration-300"
+              style={{ zIndex: 1000 }}
+              onClick={handleMenuOpen}
             >
-              {menuOpen ? (
-                <FaTimesCircle color="#f87171" size="24px" />
-              ) : (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="bg-white rounded-full w-10 h-10 shadow-lg flex justify-center items-center hamburger"
+              >
                 <FaBars color="#f87171" size="24px" />
-              )}
+              </motion.div>
             </motion.div>
-          </motion.div>
+          )}
           <div>{menuOpen && hamburgerMenu()}</div>
         </>
       ) : (

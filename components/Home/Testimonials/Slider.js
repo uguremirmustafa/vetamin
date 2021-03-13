@@ -39,11 +39,9 @@ export default function Slider() {
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       {data.map((i) => (
-        <SwiperSlide>
+        <SwiperSlide key={i.human}>
           <Slide data={i} />
         </SwiperSlide>
       ))}

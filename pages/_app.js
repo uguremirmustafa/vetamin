@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <DataProvider>
       <Provider session={pageProps.session}>
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           <Layout>
             <Component {...pageProps} />
           </Layout>
