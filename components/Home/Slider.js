@@ -32,7 +32,7 @@ export default function Slider() {
     >
       {data.map((i) => (
         <SwiperSlide>
-          <Slide data={i} />
+          <Slide key={i.image} data={i} />
         </SwiperSlide>
       ))}
     </Swiper>
