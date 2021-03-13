@@ -3,24 +3,25 @@ import React, { useEffect, useRef, useState } from 'react';
 // import { signIn, signOut, useSession } from 'next-auth/client';
 import { ActiveLink } from './ActiveLink';
 import { motion } from 'framer-motion';
-import { FaBars, FaCheck, FaTimesCircle, FaWhatsapp } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import useOnClickOutside from 'hooks/useOnClickOutside';
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const normalRoutes = [
     // { route: '/', label: 'Home' },
-    { route: '/contact', label: 'contact' },
+    { route: '/services', label: 'services', featured: false },
+    { route: '/contact', label: 'contact', featured: true },
   ];
   const hamburgerRoutes = [
     { route: '/', label: 'Home' },
-    { route: '/services', label: 'services' },
-    { route: '/contact', label: 'contact' },
+    { route: '/services', label: 'services', featured: false },
+    { route: '/contact', label: 'contact', featured: false },
   ];
 
   const normalLinks = normalRoutes.map((i) => (
     <ActiveLink href={i.route} key={i.route}>
-      <a className="nav-btn featured-nav-btn">{i.label}</a>
+      <a className={`nav-btn ${i.featured && 'featured-nav-btn'}`}>{i.label}</a>
     </ActiveLink>
   ));
   const hamburgerLinks = hamburgerRoutes.map((i) => (
@@ -68,6 +69,7 @@ function Navbar() {
     <>
       {isScrolled ? (
         <>
+          {/* hamburger button */}
           {!menuOpen && (
             <motion.div
               initial={{ opacity: 0 }}

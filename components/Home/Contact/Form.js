@@ -8,7 +8,7 @@ const initialValues = {
 };
 function Contact() {
   return (
-    <div className="m-4">
+    <div>
       <Formik
         validationSchema={object({
           name: string().required('Your name is mandatory!!!').min(2).max(100),

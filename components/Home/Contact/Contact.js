@@ -12,7 +12,9 @@ function Contact() {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga recusandae minus ratione
         harum quod odit ducimus omnis alias nostrum mollitia.
       </div>
-      <Form />
+      <div className="m-4">
+        <Form />
+      </div>
     </div>
   );
 }
