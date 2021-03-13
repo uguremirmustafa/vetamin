@@ -7,7 +7,7 @@ import HeroWave from '@components/Home/HeroWave';
 function ContactPage() {
   const iconSize = '32px';
   return (
-    <div className="pt-16 min-h-screen bg-indigo-100">
+    <div className="pt-16 min-h-screen bg-indigo-200">
       <div className="max-w-5xl mx-auto lg:px-4 pt-4 md:grid  md:grid-cols-2 gap-4 flex flex-col">
         <div className="md:col-span-2 w-full rounded  px-4 mb-4">
           <h2 className="text-3xl md:text-5xl font-bold text-center">We are waiting for you!</h2>
@@ -16,15 +16,15 @@ function ContactPage() {
           </h4>
         </div>
         <div className="md:col-span-2 w-full rounded  px-4 mb-4 flex w-full mx-auto items-center justify-center text-red-400">
-          <div className="flex flex-col items-center mx-2 text-center text-sm rounded">
+          <div className="cursor-pointer flex flex-col items-center mx-2 text-center text-sm rounded">
             <FaWhatsapp size={iconSize} />
             <span className="font-bold mt-2">Message Now!</span>
           </div>
-          <div className="flex flex-col items-center mx-2 text-center text-sm rounded">
+          <div className="cursor-pointer flex flex-col items-center mx-2 text-center text-sm rounded">
             <FaPhoneAlt size={iconSize} />
             <span className="font-bold mt-2">Call Now!</span>
           </div>
-          <div className="flex flex-col items-center mx-2 text-center text-sm rounded">
+          <div className="cursor-pointer flex flex-col items-center mx-2 text-center text-sm rounded">
             <FaInstagram size={iconSize} />
             <span className="font-bold mt-2">DM on Instagram!</span>
           </div>

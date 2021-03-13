@@ -21,7 +21,7 @@ function Navbar() {
 
   const normalLinks = normalRoutes.map((i) => (
     <ActiveLink href={i.route} key={i.route}>
-      <a className={`nav-btn ${i.featured && 'featured-nav-btn'}`}>{i.label}</a>
+      <a className={`nav-btn ${i.featured ? 'featured-nav-btn' : 'text-red-400'}`}>{i.label}</a>
     </ActiveLink>
   ));
   const hamburgerLinks = hamburgerRoutes.map((i) => (
@@ -101,7 +101,7 @@ function Navbar() {
         >
           <div className="w-full max-w-4xl mx-auto flex justify-between flex-row items-center ">
             <Link href="/">
-              <div className="text-2xl">
+              <div className="text-2xl cursor-pointer">
                 <span className="text-red-500">Vet</span>
                 <span>amin</span>
               </div>

@@ -8,10 +8,10 @@ function Contact() {
       <div className="pb-8">
         <SectionHeader>Contact</SectionHeader>
       </div>
-      <div className="px-4 max-w-lg mx-auto">
+      <p className="px-4 max-w-lg mx-auto my-8 text-medium">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga recusandae minus ratione
         harum quod odit ducimus omnis alias nostrum mollitia.
-      </div>
+      </p>
       <div className="m-4">
         <Form />
       </div>
