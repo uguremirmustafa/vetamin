@@ -52,8 +52,22 @@
   .selected {
     @apply underline;
   }
+  .input-field {
+    @apply p-2 rounded border-2 border-gray-300  outline-none text-gray-800 font-medium text-sm;
+  }
+  .input-field:active,
+  .input-field:focus {
+    @apply border-blue-500;
+  }
+  .error-message {
+    @apply text-red-500 mt-1 mx-2 rounded text-xs font-medium;
+  }
 }
 .swiper-pagination-bullet-active {
   background: #f87171 !important;
+}
+
+:root {
+  --swiper-theme-color: #f87171 !important;
 }
 @tailwind utilities;

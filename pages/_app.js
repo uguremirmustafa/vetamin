@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import { DataProvider } from '@context/GlobalState';
 import Layout from '@components/layout/Layout';
 import { initRouterListeners } from '@utils/scrollRestoration';
-import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.min.css';
 initRouterListeners();
 
 function MyApp({ Component, pageProps }) {
