@@ -47,13 +47,16 @@
     @apply bg-blue-500 font-bold text-white rounded-md py-3 px-8 text-center hover:bg-blue-400 cursor-pointer transition duration-300 text-lg shadow-md hover:shadow-lg;
   }
   .nav-btn {
-    @apply bg-white font-bold text-gray-900 rounded py-1 px-3 text-center hover:bg-gray-900 hover:text-white cursor-pointer transition duration-300 ml-1 capitalize;
+    @apply font-bold text-gray-900 rounded py-1 md:py-2 px-3 md:px-4 text-center hover:bg-gray-900 hover:text-white cursor-pointer transition duration-300 ml-1 capitalize;
+  }
+  .featured-nav-btn {
+    @apply bg-red-400 text-white;
   }
   .selected {
     @apply underline;
   }
   .input-field {
-    @apply p-2 rounded border-2 border-gray-300  outline-none text-gray-800 font-medium text-sm;
+    @apply p-2 rounded border-2 border-gray-300 bg-yellow-50 outline-none text-gray-800 font-medium text-sm;
   }
   .input-field:active,
   .input-field:focus {

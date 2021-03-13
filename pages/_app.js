@@ -4,15 +4,18 @@ import { DataProvider } from '@context/GlobalState';
 import Layout from '@components/layout/Layout';
 import { initRouterListeners } from '@utils/scrollRestoration';
 import 'swiper/swiper-bundle.min.css';
+import { AnimatePresence } from 'framer-motion';
 initRouterListeners();
 
 function MyApp({ Component, pageProps }) {
   return (
     <DataProvider>
       <Provider session={pageProps.session}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <AnimatePresence>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </AnimatePresence>
       </Provider>
     </DataProvider>
   );

@@ -6,10 +6,10 @@ function Slide({ data }) {
   const { image, service, desc } = data;
   return (
     <div
-      className="bg-gray-100 rounded-xl grid grid-rows-2 gap-4 overflow-hidden"
+      className="bg-gray-100 rounded-xl grid grid-rows-2 gap-4 overflow-hidden z-0 relative"
       style={{ height: '500px' }}
     >
-      <div className="relative row-span-1 w-full ">
+      <div className="relative row-span-1 w-full z-0">
         <Image
           alt="cat"
           src={image}
