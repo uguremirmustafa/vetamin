@@ -22,17 +22,10 @@ export default function Slider() {
     },
   ];
   return (
-    <Swiper
-      spaceBetween={50}
-      effect="fade"
-      slidesPerView={1}
-      pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
+    <Swiper spaceBetween={50} effect="fade" slidesPerView={1} pagination={{ clickable: true }}>
       {data.map((i) => (
-        <SwiperSlide>
-          <Slide key={i.image} data={i} />
+        <SwiperSlide key={i.image}>
+          <Slide data={i} />
         </SwiperSlide>
       ))}
     </Swiper>
