@@ -4,10 +4,9 @@ import { FaEnvelope, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { MdPets } from 'react-icons/md';
 import { motion } from 'framer-motion';
 function OwnerCard({ owner }) {
-  const a = [1, 2, 3];
   const size = '24px';
   return (
-    <div className="my-16 md:my-8">
+    <div className=" mt-16 mb-48 md:my-8 ">
       <div className="bg-pink-200 h-96 md:w-96 w-80 rounded-xl flex flex-col items-center">
         <motion.div
           initial={{ y: 50, opacity: 0 }}

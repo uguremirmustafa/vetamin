@@ -18,12 +18,12 @@ function AboutPage() {
     },
   ];
   return (
-    <div className="min-h-screen">
+    <>
       <Container bg="bg-pink-100">
         <div className="mt-4 text-pink-300">
           <SectionHeader>Our Crew</SectionHeader>
         </div>
-        <div className="flex flex-col md:flex-row justify-around items-center px-4 my-auto md:my-8 pb-16">
+        <div className="flex flex-col md:flex-row justify-around items-center px-4 my-auto md:my-8 pb-40">
           {owners.map((i, ind) => (
             <OwnerCard owner={i} key={ind} />
           ))}
@@ -31,7 +31,7 @@ function AboutPage() {
       </Container>
       <HeroWave />
       <div className="h-px">{/* this is just for making the scroll bar available */}</div>
-    </div>
+    </>
   );
 }
 

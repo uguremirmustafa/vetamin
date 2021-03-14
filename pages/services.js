@@ -1,5 +1,3 @@
-import SectionHeader from '@components/Home/SectionHeader';
-import Services from '@components/Home/Services';
 import Accordion from '@components/layout/Accordion/Accordion';
 import Container from '@components/layout/Container';
 import Image from 'next/image';

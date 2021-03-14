@@ -17,19 +17,28 @@ function ContactPage() {
             Address: Lorem street, Taksim avenue no:20, Istanbul
           </h4>
         </div>
-        <div className="md:col-span-2 w-full rounded  px-4 mb-4 flex w-full mx-auto items-center justify-center text-red-400">
-          <div className="cursor-pointer flex flex-col items-center mx-2 text-center text-sm rounded">
+        <div className="md:col-span-2 rounded bg-indigo-100 p-4 mb-4 flex  mx-auto items-center justify-center text-indigo-500 gap-4">
+          <a
+            className="cursor-pointer flex flex-col items-center mx-2 text-center text-xs rounded hover:text-red-400 transition"
+            href="https://wa.me/905415213549"
+          >
             <FaWhatsapp size={iconSize} />
-            <span className="font-bold mt-2">Message Now!</span>
-          </div>
-          <div className="cursor-pointer flex flex-col items-center mx-2 text-center text-sm rounded">
+            {/* <span className="font-bold mt-2">Message Now!</span> */}
+          </a>
+          <a
+            className="cursor-pointer flex flex-col items-center mx-2 text-center text-xs rounded hover:text-red-400 transition"
+            href="tel:+905415213549"
+          >
             <FaPhoneAlt size={iconSize} />
-            <span className="font-bold mt-2">Call Now!</span>
-          </div>
-          <div className="cursor-pointer flex flex-col items-center mx-2 text-center text-sm rounded">
+            {/* <span className="font-bold mt-2">Call Now!</span> */}
+          </a>
+          <a
+            href="https://instagram.com/uguremirmustafa"
+            className="cursor-pointer flex flex-col items-center mx-2 text-center text-xs rounded hover:text-red-400 transition"
+          >
             <FaInstagram size={iconSize} />
-            <span className="font-bold mt-2">DM on Instagram!</span>
-          </div>
+            {/* <span className="font-bold mt-2">DM on Instagram!</span> */}
+          </a>
         </div>
         <div className="h-96 mx-4 md:mx-none shadow-xl rounded-xl overflow-hidden border-2 border-white">
           <Map />
