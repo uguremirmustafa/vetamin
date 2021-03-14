@@ -1,6 +1,8 @@
 # Vetamin | A veterinary website built with NextJS and TailwindCSS
 
-✨ [Vetamin](https://vetamin.vercel.app) is a **veterinary website** mainly built with [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/). 
+✨ [Vetamin](https://vetamin.vercel.app) is a **veterinary website** mainly built with [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/).
+
+➡️ [Live website](https://vetamin.vercel.app)
 
 ### Features
 - It is performant, no client side rendering ❗
