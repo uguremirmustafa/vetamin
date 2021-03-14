@@ -18,7 +18,7 @@ function AboutPage() {
     },
   ];
   return (
-    <>
+    <div className="min-h-screen">
       <Container bg="bg-pink-100">
         <div className="mt-4 text-pink-300">
           <SectionHeader>Our Crew</SectionHeader>
@@ -30,7 +30,8 @@ function AboutPage() {
         </div>
       </Container>
       <HeroWave />
-    </>
+      <div className="h-px">{/* this is just for making the scroll bar available */}</div>
+    </div>
   );
 }
 
