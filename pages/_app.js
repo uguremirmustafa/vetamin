@@ -4,16 +4,33 @@ import { DataProvider } from '@context/GlobalState';
 import Layout from '@components/layout/Layout';
 import { initRouterListeners } from '@utils/scrollRestoration';
 import 'swiper/swiper-bundle.min.css';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+
 initRouterListeners();
 
-function MyApp({ Component, pageProps }) {
+const variants = {
+  pageInitial: {
+    opacity: 0,
+  },
+  pageAnimate: {
+    opacity: 1,
+  },
+};
+
+function MyApp({ Component, pageProps, router }) {
   return (
     <DataProvider>
       <Provider session={pageProps.session}>
         <AnimatePresence exitBeforeEnter>
           <Layout>
-            <Component {...pageProps} />
+            <motion.div
+              key={router.route}
+              initial="pageInitial"
+              animate="pageAnimate"
+              variants={variants}
+            >
+              <Component {...pageProps} />
+            </motion.div>
           </Layout>
         </AnimatePresence>
       </Provider>

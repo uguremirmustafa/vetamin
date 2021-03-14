@@ -12,7 +12,7 @@ export default function HeroWave() {
         speed: 0.15,
         points: 3,
       }}
-      className="absolute bottom-0 h-0 md:h-auto z-50"
+      className="absolute bottom-0 h-0 md:h-auto z-40"
     />
   );
 }

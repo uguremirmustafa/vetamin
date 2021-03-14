@@ -43,11 +43,10 @@ function Accordion() {
   return (
     <div className="bg-red-200 rounded overflow-hidden max-w-lg mx-auto">
       {data.map((item, index) => (
-        <>
+        <div key={index}>
           <div
             className="w-full p-4 flex justify-between items-center border-b-2 border-red-300  cursor-pointer hover:bg-red-300 transition duration-300"
             onClick={() => toggle(index)}
-            key={index}
           >
             <h1 className="font-medium">{item.q}</h1>
             <span className="text-red-500">
@@ -63,7 +62,7 @@ function Accordion() {
               <p>{item.a}</p>
             </motion.div>
           ) : null}
-        </>
+        </div>
       ))}
     </div>
   );

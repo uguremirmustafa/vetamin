@@ -5,18 +5,22 @@ import { ActiveLink } from './ActiveLink';
 import { motion } from 'framer-motion';
 import { FaBars } from 'react-icons/fa';
 import useOnClickOutside from 'hooks/useOnClickOutside';
+import { useWindowSize } from 'hooks/useWindowSize';
+import Logo from './Logo';
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const normalRoutes = [
     // { route: '/', label: 'Home' },
     { route: '/services', label: 'services', featured: false },
+    { route: '/about', label: 'about', featured: false },
     { route: '/contact', label: 'contact', featured: true },
   ];
   const hamburgerRoutes = [
     { route: '/', label: 'Home' },
     { route: '/services', label: 'services', featured: false },
     { route: '/contact', label: 'contact', featured: false },
+    { route: '/about', label: 'about', featured: false },
   ];
 
   const normalLinks = normalRoutes.map((i) => (
@@ -53,6 +57,8 @@ function Navbar() {
   const handleMenuOpen = () => {
     setMenuOpen(!menuOpen);
   };
+  const { width } = useWindowSize();
+  const isMobile = width <= 760;
 
   const hamburgerMenu = () => (
     <motion.nav
@@ -67,7 +73,7 @@ function Navbar() {
   );
   return (
     <>
-      {isScrolled ? (
+      {(isScrolled || isMobile) && (
         <>
           {/* hamburger button */}
           {!menuOpen && (
@@ -91,21 +97,24 @@ function Navbar() {
           )}
           <div>{menuOpen && hamburgerMenu()}</div>
         </>
-      ) : (
+      )}
+      {isMobile && (
+        <div className="absolute z-50 top-4 left-4">
+          <Logo />
+        </div>
+      )}
+      {!isMobile && !isScrolled && (
         <nav
           className={`bg-white  ${
             !isScrolled ? 'bg-opacity-0' : 'bg-opacity-100'
-          }  shadow-sm h-16 font-bold fixed w-full flex z-20
+          }  shadow-sm h-20 font-bold fixed w-full flex z-20
       transition duration-1000 px-4
       `}
         >
           <div className="w-full max-w-4xl mx-auto flex justify-between flex-row items-center ">
-            <Link href="/">
-              <div className="text-2xl cursor-pointer">
-                <span className="text-red-500">Vet</span>
-                <span>amin</span>
-              </div>
-            </Link>
+            <div>
+              <Logo />
+            </div>
             <div className="flex">{normalLinks}</div>
           </div>
         </nav>
