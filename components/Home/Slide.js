@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link as Scroller } from 'react-scroll';
 import Image from 'next/image';
 
 function Slide({ data }) {
@@ -24,9 +24,11 @@ function Slide({ data }) {
           <h3 className="text-lg font-bold text-center p-2">{service}</h3>
           <div className="px-6 py-2">{desc}</div>
         </div>
-        <button className="bg-red-400 w-40 mx-auto rounded-lg font-bold text-white p-2 mb-2">
-          Book a Session
-        </button>
+        <Scroller to="contact" smooth={true} duration={1000} className="mx-auto">
+          <button className="bg-red-400 w-40 mx-auto rounded-lg font-bold text-white p-2 mb-2">
+            Book a Session
+          </button>
+        </Scroller>
       </div>
     </div>
   );

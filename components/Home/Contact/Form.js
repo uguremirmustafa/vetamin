@@ -44,7 +44,7 @@ function Contact() {
         {({ values, isSubmitting, errors }) => (
           <Form
             as="div"
-            className="flex flex-col max-w-lg mx-auto rounded overflow-hidden bg-yellow-200 shadow-xl"
+            className="flex flex-col max-w-lg mx-auto rounded-xl overflow-hidden bg-red-200 shadow-xl border-2 border-white"
             autoComplete="off"
           >
             <div className="mx-8 mt-8 flex flex-col">

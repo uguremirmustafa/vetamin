@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { Link as Scroller } from 'react-scroll';
 
 function ServiceCard({ order, bg }) {
   return (
@@ -26,9 +27,11 @@ function ServiceCard({ order, bg }) {
           atque assumenda! Fuga molestiae a accusantium, ex iste ut voluptatum doloremque sed
           eveniet laborum obcaecati repellendus voluptas modi tempore.
         </p>
-        <button className="bg-red-400 w-40 mx-auto rounded-md font-bold text-white p-2 mt-6 shadow">
-          Book a Session
-        </button>
+        <Scroller to="contact" smooth={true} duration={1000}>
+          <button className="bg-red-400 w-40 mx-auto rounded-md font-bold text-white p-2 mt-6 shadow">
+            Book a Session
+          </button>
+        </Scroller>
       </div>
     </div>
   );

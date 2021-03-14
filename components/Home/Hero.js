@@ -1,5 +1,7 @@
 import React from 'react';
 import HeroWave from './HeroWave';
+import { Link as Scroller } from 'react-scroll';
+
 import { AnimatePresence, motion } from 'framer-motion';
 function Hero() {
   return (
@@ -22,14 +24,28 @@ function Hero() {
           <p className="p-4 text-gray-100 font-medium">
             We care your pets just like you do, with love!
           </p>
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, type: 'spring', stiffness: 100 }}
-            className="my-4 py-3 rounded-md font-bold bg-red-400 text-white w-32 z-10 outline-none hover:text-red-400 hover:bg-white transition duration-500"
-          >
-            Reach Us!
-          </motion.button>
+          <div className="flex flex-col md:flex-row justify-center items-center">
+            <Scroller to="services" smooth={true} duration={1000}>
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2, type: 'spring', stiffness: 100 }}
+                className="my-4 py-3 rounded-md font-bold bg-red-400 text-white w-32 z-10 outline-none hover:text-red-400 hover:bg-white transition duration-500"
+              >
+                Reach Us!
+              </motion.button>
+            </Scroller>
+            <Scroller to="testimonials" smooth={true} duration={1000}>
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2, type: 'spring', stiffness: 100 }}
+                className="md:ml-4 my-4 py-3 rounded-md font-bold bg-white text-red-400 w-60 z-10 outline-none hover:text-white hover:bg-red-400 transition duration-500"
+              >
+                Meet Happy Customers
+              </motion.button>
+            </Scroller>
+          </div>
         </div>
         <HeroWave />
       </div>

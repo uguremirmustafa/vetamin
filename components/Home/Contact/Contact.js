@@ -4,7 +4,7 @@ import Form from './Form';
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-red-200 py-8">
+    <div id="contact" className="min-h-screen bg-red-300 py-8">
       <div className="pb-8">
         <SectionHeader>Contact</SectionHeader>
       </div>

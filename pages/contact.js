@@ -29,7 +29,7 @@ function ContactPage() {
             <span className="font-bold mt-2">DM on Instagram!</span>
           </div>
         </div>
-        <div className="h-96 mx-4 md:mx-none shadow-xl rounded overflow-hidden">
+        <div className="h-96 mx-4 md:mx-none shadow-xl rounded-xl overflow-hidden">
           <Map />
         </div>
         <div className="mx-4 md:mx-none mb-20">

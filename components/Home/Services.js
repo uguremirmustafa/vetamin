@@ -6,7 +6,7 @@ import Slider from './Slider';
 
 function Services() {
   return (
-    <div className="min-h-screen bg-indigo-500 bg-cover pb-16 px-4">
+    <div id="services" className="min-h-screen bg-indigo-500 bg-cover pb-16 px-4">
       <div className="mx-auto lg:max-w-5xl">
         <div className="pt-6 pb-2 md:py-6">
           <SectionHeader color={'text-gray-800'}>Services</SectionHeader>
