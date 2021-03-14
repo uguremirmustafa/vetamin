@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { Link as Scroller } from 'react-scroll';
 
-function ServiceCard({ order, bg }) {
+function ServiceCard({ service, bg }) {
   return (
     <div className="w-full h-96 grid sm:grid-cols-5 ">
       <div className="relative row-span-1 w-full col-span-2 bg-red-300  bg-cover rounded-xl transform hover:-rotate-3 cursor-pointer transition delay-150 duration-300 ease-in-out shadow-xl">
@@ -21,7 +21,7 @@ function ServiceCard({ order, bg }) {
         text-sm lg:text-md
         relative -right-10 "
       >
-        <h3 className="font-bold text-lg mb-2">Vaccination</h3>
+        <h3 className="font-bold text-lg mb-2">{service}</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia perferendis
           atque assumenda! Fuga molestiae a accusantium, ex iste ut voluptatum doloremque sed

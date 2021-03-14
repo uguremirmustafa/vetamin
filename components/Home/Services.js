@@ -16,9 +16,9 @@ function Services() {
         </div>
         {/* large screen services */}
         <div className="grid grid-flow-col grid-cols-1 grid-rows-3 gap-4 mt-8 hidden sm:block">
-          <ServiceCard bg={'cat.jpg'} />
-          <ServiceCardRight bg={'dog-card.jpg'} />
-          <ServiceCard bg={'hamster-card.jpg'} />
+          <ServiceCard bg={'cat.jpg'} service="Vaccination" />
+          <ServiceCardRight bg={'dog-card.jpg'} service="Cleaning" />
+          <ServiceCard bg={'hamster-card.jpg'} service="Shaving and Bath" />
         </div>
         {/* small screen services */}
         <div className="sm:hidden">
