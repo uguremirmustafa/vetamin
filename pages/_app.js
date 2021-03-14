@@ -10,12 +10,12 @@ initRouterListeners();
 
 const variants = {
   pageInitial: {
-    // opacity: 0,
-    y: -100,
+    opacity: 0.5,
+    // y: -100,
   },
   pageAnimate: {
-    // opacity: 1,
-    y: 0,
+    opacity: 1,
+    // y: 0,
   },
 };
 

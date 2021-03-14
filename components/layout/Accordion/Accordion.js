@@ -41,7 +41,7 @@ function Accordion() {
     setClicked(index);
   };
   return (
-    <div className="bg-red-200 rounded overflow-hidden max-w-lg mx-auto">
+    <div className="bg-red-200 rounded-xl shadow-lg overflow-hidden max-w-xl mx-auto">
       {data.map((item, index) => (
         <div key={index}>
           <div
@@ -55,7 +55,7 @@ function Accordion() {
           </div>
           {clicked === index ? (
             <motion.div
-              className="py-4 pl-8 bg-blue-100"
+              className="py-4 pl-8 pr-4 bg-blue-100"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
