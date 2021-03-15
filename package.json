@@ -15,6 +15,7 @@
     "mongoose": "^5.11.18",
     "next": "latest",
     "next-auth": "^3.6.0",
+    "next-pwa": "^5.0.6",
     "postcss": "^8.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
