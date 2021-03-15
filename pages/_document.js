@@ -2,14 +2,14 @@
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import { GA_TRACKING_ID } from '../lib/gtag';
+// import { GA_TRACKING_ID } from '../lib/gtag';
 
 class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -21,7 +21,7 @@ class MyDocument extends Document {
             });
           `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />
