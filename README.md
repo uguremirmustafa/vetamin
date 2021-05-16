@@ -31,4 +31,4 @@
 - This website can turn into a full-stack application potentially.
 
 ### Application Type
-📚 education and learning 
+📚 education and learning  
